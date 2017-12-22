@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by yangxiao on 2017/11/14.
  */
-
+//uu
 public class Consumer {
 	List<String> topics = new LinkedList<>();
 	int pos = 0;
