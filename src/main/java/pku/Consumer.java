@@ -56,7 +56,7 @@ public class Consumer {
 			KeyValue headers = new DefaultKeyValue();
 			for (String header : allHeaders) {
 				String[] headerSplit = header.split(":");
-				headers.put(Utils.ByteToStrMap.get(headerSplit[0]) , headerSplit[1] + "");
+				headers.put(Utils.CharToStrMap.get(headerSplit[0]) , headerSplit[1] + "");
 			}
 			msg.setHeaders(headers);
 			return msg;

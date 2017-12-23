@@ -42,16 +42,16 @@ public class Producer {
 		for (String key : headers.keySet()) {  //处理消息头信息
 			Object object = headers.getObj(key);  
 			if (object instanceof Integer) {  //  格式    key : 值
-				sb.append(Utils.StrToByteMap.get(key)).append(":").append(Integer.toString(((Integer) object))).append(",");
+				sb.append(Utils.StrToCharMap.get(key)).append(":").append(Integer.toString(((Integer) object))).append(",");
 			}
 			if (object instanceof Double) {
-				sb.append(Utils.StrToByteMap.get(key)).append(":").append(Double.toString(((Double) object))).append(",");
+				sb.append(Utils.StrToCharMap.get(key)).append(":").append(Double.toString(((Double) object))).append(",");
 			}
 			if (object instanceof Long) {
-				sb.append(Utils.StrToByteMap.get(key)).append(":").append(Long.toString(((Long) object))).append(",");
+				sb.append(Utils.StrToCharMap.get(key)).append(":").append(Long.toString(((Long) object))).append(",");
 			}
 			if (object instanceof String) {
-				sb.append(Utils.StrToByteMap.get(key)).append(":").append(((String) object) + "").append(",");
+				sb.append(Utils.StrToCharMap.get(key)).append(":").append(((String) object) + "").append(",");
 			}
 		}
 		in.writeInt(sb.substring(0, sb.length() - 1).toString().getBytes().length);// 消息头大小
