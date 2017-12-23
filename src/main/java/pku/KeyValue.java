@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public interface KeyValue {
     public Object getObj(String key);
-    public HashMap<String, String> getMap();
+    public HashMap<String, Object> getMap();
     public KeyValue put(String key, int value) ;
     public KeyValue put(String key, long value);
     public KeyValue put(String key, double value);
